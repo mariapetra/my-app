@@ -1,10 +1,29 @@
 import React from "react"
+import {Router, Routes, Route} from "react-router-dom"
+
+//pages
+import Home from "./components/Home/Home"
+
+//components
 import Nav from "./components/Nav/Nav"
 
-export default function App() {
+//styles
+import "./index.css"
+
+function App() {
   return (
-    <>
-    <Nav />
-    </>
-  )
+    <Router>
+      <>
+      <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+
+        </Routes>
+      
+      </>
+    </Router>
+  );
 }
+
+export default App;
